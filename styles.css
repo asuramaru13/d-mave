@@ -466,10 +466,18 @@ ol { margin: 0; padding: 0; list-style: none; }
    в оттенках серого, blur, радиальная маска и плавное движение фона. */
 .aurora {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100lvh; /* «большой» вьюпорт: не ужимается, когда на мобильном показывается адресная строка */
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
+  /* отдельный композит-слой — iOS Safari не дёргает/не съезжает фон при прокрутке */
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 .aurora::before,
 .aurora::after {
