@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DREAMER — D.Mave</title>
+  <meta name="description" content="Listen to DREAMER by D.Mave on all major streaming platforms.">
+
+  <link rel="icon" type="image/jpeg" href="photos/D.Mave%20pfp.jpg">
+  <meta property="og:type" content="music.album">
+  <meta property="og:url" content="https://asuramaru13.github.io/d-mave/release.html">
+  <meta property="og:title" content="DREAMER — D.Mave">
+  <meta property="og:description" content="Listen to DREAMER by D.Mave on all major streaming platforms.">
+  <meta property="og:image" content="https://asuramaru13.github.io/d-mave/photos/dreamer%20cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DREAMER — D.Mave">
+  <meta name="twitter:image" content="https://asuramaru13.github.io/d-mave/photos/dreamer%20cover.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+    .rp {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      padding: 88px 20px 56px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .rp-back {
+      position: fixed;
+      top: 16px;
+      left: 18px;
+      z-index: 5;
+      font-family: var(--font-pixel);
+      font-size: 13px;
+      letter-spacing: .08em;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .45);
+      -webkit-backdrop-filter: blur(10px) saturate(140%);
+              backdrop-filter: blur(10px) saturate(140%);
+      transition: transform .2s ease, color .2s ease, background .2s ease;
+    }
+    .rp-back:hover { color: var(--ink); transform: translateX(-2px); background: rgba(255, 255, 255, .24); }
+    .rp-cover {
+      width: min(74vw, 320px);
+      aspect-ratio: 1;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 34px 80px rgba(0, 0, 0, .5);
+    }
+    .rp-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .rp-head { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+    .rp-eyebrow {
+      font-family: var(--font-pixel);
+      font-size: 12px; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--muted); margin: 0;
+    }
+    .rp-title {
+      font-family: var(--font-display);
+      font-size: clamp(46px, 13vw, 76px);
+      line-height: .9; letter-spacing: .02em; margin: 6px 0 2px;
+    }
+    .rp-artist {
+      font-family: var(--font-button);
+      font-weight: 500; text-transform: uppercase; letter-spacing: .1em;
+      font-size: 14px; color: #2c2c2c; margin: 0;
+    }
+    .rp-services {
+      display: flex; flex-direction: column; gap: 10px;
+      width: min(90vw, 380px); margin-top: 6px;
+    }
+    .svc {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 13px 18px; border-radius: 16px; text-decoration: none; color: var(--ink);
+      font-family: var(--font-button); font-weight: 500; text-transform: uppercase;
+      letter-spacing: .04em; font-size: 15px;
+      background: rgba(255, 255, 255, .14);
+      border: 1px solid rgba(255, 255, 255, .5);
+      -webkit-backdrop-filter: blur(12px) saturate(150%);
+              backdrop-filter: blur(12px) saturate(150%);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, .8), 0 8px 20px rgba(0, 0, 0, .1);
+      transition: transform .25s cubic-bezier(.22, 1, .36, 1), background .25s ease, box-shadow .25s ease;
+    }
+    .svc:hover {
+      transform: translateY(-2px) scale(1.02);
+      background: rgba(255, 255, 255, .26);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, .92), 0 14px 28px rgba(0, 0, 0, .14);
+    }
+    .svc__l { display: flex; align-items: center; gap: 12px; }
+    .svc__l svg { width: 22px; height: 22px; flex: none; }
+    .svc__arrow { color: var(--muted); transition: transform .25s ease, color .25s ease; flex: none; }
+    .svc:hover .svc__arrow { transform: translate(3px, -3px); color: var(--ink); }
+  </style>
+</head>
+<body>
+
+  <div class="aurora" aria-hidden="true"></div>
+
+  <a class="rp-back" href="index.html">&larr; BACK</a>
+
+  <main class="rp">
+    <div class="rp-cover reveal">
+      <img src="photos/dreamer%20cover.jpg" alt="Обложка альбома DREAMER — D.Mave">
+    </div>
+
+    <div class="rp-head">
+      <p class="rp-eyebrow reveal">// Last release</p>
+      <h1 class="rp-title reveal">DREAMER</h1>
+      <p class="rp-artist reveal">D.Mave</p>
+    </div>
+
+    <!-- Spotify и Amazon Music ведут прямо на АЛЬБОМ (данные Odesli).
+         Apple Music, YouTube Music, SoundCloud, Deezer — пока на профиль артиста
+         (прямой ссылки на альбом нет); замените, когда альбом там появится. -->
+    <nav class="rp-services" aria-label="Слушать на площадках">
+
+      <a class="svc reveal" href="https://open.spotify.com/album/6qW0QtCH3sCwZKzRVfQxWa" target="_blank" rel="noopener">
+        <span class="svc__l">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.59 14.44a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.22c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.86Zm1.23-2.73a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.5c3.64-1.09 8.16-.56 11.24 1.34.37.23.49.71.25 1.07Zm.11-2.85c-3.23-1.92-8.55-2.1-11.63-1.16a.94.94 0 1 1-.54-1.8c3.54-1.07 9.42-.86 13.13 1.35a.94.94 0 0 1-.96 1.61Z"/></svg>
+          <span>Spotify</span>
+        </span>
+        <svg class="svc__arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+      </a>
+
+      <a class="svc reveal" href="https://music.apple.com/ua/artist/d-mave/1584097393" target="_blank" rel="noopener">
+        <span class="svc__l">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M18.5 3.1 9.2 5.05a.9.9 0 0 0-.72.88v8.33a2.9 2.9 0 1 0 1.6 2.6V9.2l7.7-1.6v4.78a2.9 2.9 0 1 0 1.6 2.6V3.98a.9.9 0 0 0-1.08-.88Z"/></svg>
+          <span>Apple Music</span>
+        </span>
+        <svg class="svc__arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+      </a>
+
+      <a class="svc reveal" href="https://music.youtube.com/@DMave" target="_blank" rel="noopener">
+        <span class="svc__l">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M23 12s0-3.2-.41-4.73a2.5 2.5 0 0 0-1.76-1.77C19.3 5.08 12 5.08 12 5.08s-7.3 0-8.83.42A2.5 2.5 0 0 0 1.41 7.27C1 8.8 1 12 1 12s0 3.2.41 4.73a2.5 2.5 0 0 0 1.76 1.77C4.7 18.92 12 18.92 12 18.92s7.3 0 8.83-.42a2.5 2.5 0 0 0 1.76-1.77C23 15.2 23 12 23 12Zm-13 3.2V8.8l5.5 3.2-5.5 3.2Z"/></svg>
+          <span>YouTube Music</span>
+        </span>
+        <svg class="svc__arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+      </a>
+
+      <a class="svc reveal" href="https://soundcloud.com/david-dolgikh" target="_blank" rel="noopener">
+        <span class="svc__l">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M2 14v3h1v-3H2Zm2-1v4h1v-4H4Zm2-1.5V18h1v-6.5H6Zm2-1V18h1V10.5H8Zm2-.8V18h1V9.7h-1Zm2.5-.2V18H21a3 3 0 0 0 .2-6 4.5 4.5 0 0 0-8.5-2.3c-.1 0-.2.1-.2.2Z"/></svg>
+          <span>SoundCloud</span>
+        </span>
+        <svg class="svc__arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+      </a>
+
+      <a class="svc reveal" href="https://www.deezer.com/en/artist/5999942" target="_blank" rel="noopener">
+        <span class="svc__l">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <rect x="16.4" y="5" width="6.1" height="2.5" rx=".3"/><rect x="16.4" y="9.1" width="6.1" height="2.5" rx=".3"/><rect x="8.95" y="9.1" width="6.1" height="2.5" rx=".3"/><rect x="16.4" y="13.2" width="6.1" height="2.5" rx=".3"/><rect x="8.95" y="13.2" width="6.1" height="2.5" rx=".3"/><rect x="1.5" y="13.2" width="6.1" height="2.5" rx=".3"/><rect x="16.4" y="17.3" width="6.1" height="2.5" rx=".3"/><rect x="8.95" y="17.3" width="6.1" height="2.5" rx=".3"/><rect x="1.5" y="17.3" width="6.1" height="2.5" rx=".3"/>
+          </svg>
+          <span>Deezer</span>
+        </span>
+        <svg class="svc__arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+      </a>
+
+      <a class="svc reveal" href="https://music.amazon.com/albums/B0HM22D9TM" target="_blank" rel="noopener">
+        <span class="svc__l">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5"/><path d="M7 8.5v4M10 6.8v7.4M13 9v3.5M16 7.5v6"/><path d="M6.3 16.6c3.6 2.1 8.1 2.1 11.7 0"/>
+          </svg>
+          <span>Amazon Music</span>
+        </span>
+        <svg class="svc__arrow" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+      </a>
+
+    </nav>
+  </main>
+
+  <script>
+    // Apple-style появление при загрузке (каскадом). setTimeout, а не rAF — надёжнее.
+    (function () {
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = [].slice.call(document.querySelectorAll('.reveal'));
+      if (reduced) { els.forEach(function (el) { el.classList.add('in'); }); return; }
+      setTimeout(function () {
+        els.forEach(function (el, i) {
+          el.style.transitionDelay = (i * 0.07) + 's';
+          el.classList.add('in');
+        });
+      }, 80);
+    })();
+  </script>
+</body>
+</html>

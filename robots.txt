@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asuramaru13.github.io/d-mave/sitemap.xml

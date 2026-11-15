@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D.Mave — Official</title>
+  <meta name="description" content="D.Mave — artist, composer and music producer. Last release: DREAMER.">
+
+  <!-- Иконка вкладки -->
+  <link rel="icon" type="image/jpeg" href="photos/D.Mave%20pfp.jpg">
+
+  <!-- Превью при шеринге (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://asuramaru13.github.io/d-mave/">
+  <meta property="og:title" content="D.Mave — Official">
+  <meta property="og:description" content="Artist, composer and music producer. Last release: DREAMER.">
+  <meta property="og:image" content="https://asuramaru13.github.io/d-mave/photos/dreamer%20cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="D.Mave — Official">
+  <meta name="twitter:description" content="Artist, composer and music producer. Last release: DREAMER.">
+  <meta name="twitter:image" content="https://asuramaru13.github.io/d-mave/photos/dreamer%20cover.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gooey-nav.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- ============ AURORA BACKGROUND (чёрно-белая) ============ -->
+  <div class="aurora" aria-hidden="true"></div>
+
+  <!-- Аватар артиста (кругом, верхний левый угол) -->
+  <img class="avatar" src="photos/D.Mave%20pfp.jpg" alt="D.Mave" width="66" height="66">
+
+  <!-- Навигация (gooey) — крепится вверху по центру -->
+  <div class="gooey-nav-mount"></div>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="hero">
+    <div class="wrap hero__inner">
+
+      <div class="hero__player">
+        <!-- Проигрыватель-вертушка (декор). Заменить файл при необходимости. -->
+        <img src="photos/dreamer%20player.png" alt="Проигрыватель с пластинкой DREAMER" class="hero__player-img reveal">
+      </div>
+
+      <div class="hero__intro">
+        <p class="eyebrow reveal">// ARTIST</p>
+        <!-- EDIT: ник артиста -->
+        <h1 class="hero__name reveal">D.Mave</h1>
+        <!-- EDIT: пара строк про артиста -->
+        <p class="hero__bio reveal">
+          David<br>
+          Kyiv, Ukraine<br>
+          Music creator/Sound engineer
+        </p>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ============ О СЕБЕ / УСЛУГА ============ -->
+  <section class="about" id="about">
+    <div class="wrap about__inner">
+      <p class="eyebrow reveal">// ABOUT</p>
+      <!-- EDIT: заголовок услуги -->
+      <h2 class="about__title reveal">Production · Mixing · Mastering</h2>
+      <!-- EDIT: описание услуги -->
+      <p class="about__text reveal">
+        Artist, composer, and music producer who creates, engineers, and releases original tracks
+        and instrumental beats across major streaming platforms. For cooperation ↓
+      </p>
+      <!-- CTA → Instagram -->
+      <a class="cta reveal" href="https://www.instagram.com/d.mave.music/" target="_blank" rel="noopener" aria-label="Get in touch on Instagram">
+        <span>Get in touch</span>
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ LAST RELEASE ============ -->
+  <section class="release" id="release">
+    <div class="wrap release__inner">
+
+      <div class="release__info">
+        <div class="release__head">
+          <div class="release__headtext">
+            <p class="eyebrow reveal">LAST RELEASE</p>
+            <!-- EDIT: название альбома -->
+            <h2 class="release__title reveal">DREAMER</h2>
+          </div>
+          <img class="release__cover reveal" src="photos/dreamer%20cover.jpg" alt="Обложка альбома DREAMER" width="96" height="96">
+        </div>
+        <!-- EDIT: мета -->
+        <p class="release__meta reveal">ALBUM · 2026 · AMBIENT / ELECTRONIC</p>
+
+        <!-- EDIT: треки. data-src — путь к короткому семплу (audio/samples/<Название>.wav) -->
+        <ol class="tracklist js-stagger">
+          <li class="track reveal" data-src="audio/samples/Inner World.wav">
+            <button class="track__btn" type="button" aria-label="Слушать семпл: Inner World">
+              <span class="track__num" aria-hidden="true"></span>
+              <svg class="track__i track__i--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="track__i track__i--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.1v14H7zM13.9 5H17v14h-3.1z"/></svg>
+              <span class="track__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+            </button>
+            <span class="track__name">Inner World</span>
+            <span class="track__dur">2:38</span>
+          </li>
+          <li class="track reveal" data-src="audio/samples/Laid-Back Cafe.wav">
+            <button class="track__btn" type="button" aria-label="Слушать семпл: Laid-Back Cafe">
+              <span class="track__num" aria-hidden="true"></span>
+              <svg class="track__i track__i--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="track__i track__i--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.1v14H7zM13.9 5H17v14h-3.1z"/></svg>
+              <span class="track__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+            </button>
+            <span class="track__name">Laid-Back Cafe</span>
+            <span class="track__dur">2:34</span>
+          </li>
+          <li class="track reveal" data-src="audio/samples/Chillhop Oasis.wav">
+            <button class="track__btn" type="button" aria-label="Слушать семпл: Chillhop Oasis">
+              <span class="track__num" aria-hidden="true"></span>
+              <svg class="track__i track__i--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="track__i track__i--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.1v14H7zM13.9 5H17v14h-3.1z"/></svg>
+              <span class="track__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+            </button>
+            <span class="track__name">Chillhop Oasis</span>
+            <span class="track__dur">2:27</span>
+          </li>
+          <li class="track reveal" data-src="audio/samples/Forest.wav">
+            <button class="track__btn" type="button" aria-label="Слушать семпл: Forest">
+              <span class="track__num" aria-hidden="true"></span>
+              <svg class="track__i track__i--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="track__i track__i--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.1v14H7zM13.9 5H17v14h-3.1z"/></svg>
+              <span class="track__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+            </button>
+            <span class="track__name">Forest</span>
+            <span class="track__dur">2:33</span>
+          </li>
+          <li class="track reveal" data-src="audio/samples/Near the lake.wav">
+            <button class="track__btn" type="button" aria-label="Слушать семпл: Near the lake">
+              <span class="track__num" aria-hidden="true"></span>
+              <svg class="track__i track__i--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="track__i track__i--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.1v14H7zM13.9 5H17v14h-3.1z"/></svg>
+              <span class="track__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+            </button>
+            <span class="track__name">Near the lake</span>
+            <span class="track__dur">2:33</span>
+          </li>
+          <li class="track reveal" data-src="audio/samples/Out of the fog.wav">
+            <button class="track__btn" type="button" aria-label="Слушать семпл: Out of the fog">
+              <span class="track__num" aria-hidden="true"></span>
+              <svg class="track__i track__i--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="track__i track__i--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.1v14H7zM13.9 5H17v14h-3.1z"/></svg>
+              <span class="track__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+            </button>
+            <span class="track__name">Out of the fog</span>
+            <span class="track__dur">2:40</span>
+          </li>
+          <li class="track reveal" data-src="audio/samples/Reverie.wav">
+            <button class="track__btn" type="button" aria-label="Слушать семпл: Reverie">
+              <span class="track__num" aria-hidden="true"></span>
+              <svg class="track__i track__i--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="track__i track__i--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.1v14H7zM13.9 5H17v14h-3.1z"/></svg>
+              <span class="track__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+            </button>
+            <span class="track__name">Reverie</span>
+            <span class="track__dur">2:39</span>
+          </li>
+          <li class="track reveal" data-src="audio/samples/Warm day.wav">
+            <button class="track__btn" type="button" aria-label="Слушать семпл: Warm day">
+              <span class="track__num" aria-hidden="true"></span>
+              <svg class="track__i track__i--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="track__i track__i--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.1v14H7zM13.9 5H17v14h-3.1z"/></svg>
+              <span class="track__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+            </button>
+            <span class="track__name">Warm day</span>
+            <span class="track__dur">2:42</span>
+          </li>
+          <li class="track reveal" data-src="audio/samples/Weekend.wav">
+            <button class="track__btn" type="button" aria-label="Слушать семпл: Weekend">
+              <span class="track__num" aria-hidden="true"></span>
+              <svg class="track__i track__i--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="track__i track__i--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.1v14H7zM13.9 5H17v14h-3.1z"/></svg>
+              <span class="track__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+            </button>
+            <span class="track__name">Weekend</span>
+            <span class="track__dur">2:36</span>
+          </li>
+        </ol>
+
+        <!-- Ведёт на страницу альбома со всеми сервисами -->
+        <a class="album-link reveal" href="release.html">
+          <span>Listen to album</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17 17 7"/><path d="M8 7h9v9"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="release__vinyl">
+        <img src="photos/dreamer.png" alt="Виниловая пластинка DREAMER" class="vinyl" id="vinyl">
+
+        <!-- Декоративный прогресс-ползунок (полукруг вокруг пластинки) -->
+        <svg class="vinyl-progress" viewBox="0 0 100 100" aria-hidden="true">
+          <path class="vp-track" d="M50 3 A47 47 0 0 0 50 97" pathLength="100"></path>
+          <path class="vp-fill" id="vpFill" d="M50 3 A47 47 0 0 0 50 97" pathLength="100"></path>
+          <circle class="vp-handle" id="vpHandle" cx="50" cy="3" r="1"></circle>
+        </svg>
+
+        <!-- Декоративный таймер трека -->
+        <div class="vinyl-timer" aria-hidden="true">
+          <span id="tCur">1:43</span><span class="vt-sep">/</span><span id="tDur">2:38</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ SOCIALS ============ -->
+  <footer class="socials" id="follow">
+    <div class="wrap socials__inner">
+      <p class="eyebrow socials__label reveal">// FOLLOW</p>
+      <nav class="social-row reveal" aria-label="Соцсети артиста">
+
+        <a class="social" href="https://open.spotify.com/artist/6goFw2theEW1smDu4M0lFj" target="_blank" rel="noopener" aria-label="Spotify">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor">
+            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.59 14.44a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.22c3.81-.87 7.08-.5 9.72 1.11.3.18.39.57.21.86Zm1.23-2.73a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.97-1.17a.78.78 0 1 1-.45-1.5c3.64-1.09 8.16-.56 11.24 1.34.37.23.49.71.25 1.07Zm.11-2.85c-3.23-1.92-8.55-2.1-11.63-1.16a.94.94 0 1 1-.54-1.8c3.54-1.07 9.42-.86 13.13 1.35a.94.94 0 0 1-.96 1.61Z"/>
+          </svg>
+        </a>
+
+        <a class="social" href="https://music.apple.com/ua/artist/d-mave/1584097393" target="_blank" rel="noopener" aria-label="Apple Music">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor">
+            <path d="M18.5 3.1 9.2 5.05a.9.9 0 0 0-.72.88v8.33a2.9 2.9 0 1 0 1.6 2.6V9.2l7.7-1.6v4.78a2.9 2.9 0 1 0 1.6 2.6V3.98a.9.9 0 0 0-1.08-.88Z"/>
+          </svg>
+        </a>
+
+        <a class="social" href="https://music.youtube.com/@DMave" target="_blank" rel="noopener" aria-label="YouTube Music">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor">
+            <path d="M23 12s0-3.2-.41-4.73a2.5 2.5 0 0 0-1.76-1.77C19.3 5.08 12 5.08 12 5.08s-7.3 0-8.83.42A2.5 2.5 0 0 0 1.41 7.27C1 8.8 1 12 1 12s0 3.2.41 4.73a2.5 2.5 0 0 0 1.76 1.77C4.7 18.92 12 18.92 12 18.92s7.3 0 8.83-.42a2.5 2.5 0 0 0 1.76-1.77C23 15.2 23 12 23 12Zm-13 3.2V8.8l5.5 3.2-5.5 3.2Z"/>
+          </svg>
+        </a>
+
+        <a class="social" href="https://soundcloud.com/david-dolgikh" target="_blank" rel="noopener" aria-label="SoundCloud">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor">
+            <path d="M2 14v3h1v-3H2Zm2-1v4h1v-4H4Zm2-1.5V18h1v-6.5H6Zm2-1V18h1V10.5H8Zm2-.8V18h1V9.7h-1Zm2.5-.2V18H21a3 3 0 0 0 .2-6 4.5 4.5 0 0 0-8.5-2.3c-.1 0-.2.1-.2.2Z"/>
+          </svg>
+        </a>
+
+        <a class="social" href="https://www.deezer.com/en/artist/5999942" target="_blank" rel="noopener" aria-label="Deezer">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor">
+            <rect x="16.4" y="5" width="6.1" height="2.5" rx=".3"/>
+            <rect x="16.4" y="9.1" width="6.1" height="2.5" rx=".3"/>
+            <rect x="8.95" y="9.1" width="6.1" height="2.5" rx=".3"/>
+            <rect x="16.4" y="13.2" width="6.1" height="2.5" rx=".3"/>
+            <rect x="8.95" y="13.2" width="6.1" height="2.5" rx=".3"/>
+            <rect x="1.5" y="13.2" width="6.1" height="2.5" rx=".3"/>
+            <rect x="16.4" y="17.3" width="6.1" height="2.5" rx=".3"/>
+            <rect x="8.95" y="17.3" width="6.1" height="2.5" rx=".3"/>
+            <rect x="1.5" y="17.3" width="6.1" height="2.5" rx=".3"/>
+          </svg>
+        </a>
+
+        <a class="social" href="https://music.amazon.com/artists/B00L9LZNYM/d-mave" target="_blank" rel="noopener" aria-label="Amazon Music">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5"/>
+            <path d="M7 8.5v4M10 6.8v7.4M13 9v3.5M16 7.5v6"/>
+            <path d="M6.3 16.6c3.6 2.1 8.1 2.1 11.7 0"/>
+          </svg>
+        </a>
+
+        <a class="social" href="https://www.instagram.com/d.mave.music/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+
+      </nav>
+      <p class="copyright reveal">© <span id="year">2025</span> D.Mave. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="gooey-nav.js"></script>
+  <script src="player-image.js"></script>
+  <script src="dither-veil.js"></script>
+</body>
+</html>
