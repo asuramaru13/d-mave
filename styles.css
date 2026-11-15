@@ -466,18 +466,10 @@ ol { margin: 0; padding: 0; list-style: none; }
    в оттенках серого, blur, радиальная маска и плавное движение фона. */
 .aurora {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  height: 100lvh; /* «большой» вьюпорт: не ужимается, когда на мобильном показывается адресная строка */
+  inset: 0;
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
-  /* отдельный композит-слой — iOS Safari не дёргает/не съезжает фон при прокрутке */
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 .aurora::before,
 .aurora::after {
@@ -510,6 +502,61 @@ ol { margin: 0; padding: 0; list-style: none; }
 @keyframes aurora {
   from { background-position: 50% 50%, 50% 50%; }
   to   { background-position: 350% 50%, 350% 50%; }
+}
+
+/* Телефоны/планшеты: iOS Safari (и мобильный Chrome) не рисуют fixed-слой под статус-баром
+   и нижним тулбаром — при прокрутке у краёв появляется «шов». Поэтому здесь аврора —
+   обычная часть страницы: покрывает весь документ и прокручивается вместе с контентом,
+   значит рисуется везде, где рисуется сайт. Размеры узора — в единицах экрана (vw/vh),
+   чтобы рисунок выглядел так же, как на фиксированной версии. */
+@media (hover: none), (pointer: coarse) {
+  body { position: relative; min-height: 100vh; }
+  .aurora {
+    position: absolute;
+    inset: 0;
+  }
+  /* Узор бесшовный: период полос задан в vw, а размеры плиток кратны периоду
+     вдоль направления градиента (100°: sin=0.98481, cos=0.17365) — стыков плиток не видно,
+     поэтому blur не нужен (он слишком тяжёл для слоя высотой во всю страницу). */
+  .aurora::before,
+  .aurora::after {
+    inset: 0;
+    filter: none;
+    -webkit-mask-image: none;
+            mask-image: none;
+    will-change: auto;
+  }
+  .aurora::before {
+    background-image:
+      repeating-linear-gradient(100deg,
+        rgba(255,255,255,.92) 0, rgba(255,255,255,.92) 26.25vw,
+        transparent 37.5vw, transparent 45vw, rgba(255,255,255,.92) 60vw),
+      repeating-linear-gradient(100deg,
+        #141414 0, #5e5e5e 14.5vw, #cfcfcf 29vw, #6a6a6a 43.5vw, #202020 58vw);
+    background-size: 121.85vw 345.52vw, 117.79vw 334.01vw;
+    background-position: 0 0, 0 0;
+    opacity: .72;
+    animation: aurora-m 60s linear infinite;
+  }
+  .aurora::after {
+    background-image:
+      repeating-linear-gradient(100deg,
+        #141414 0, #5e5e5e 16vw, #cfcfcf 32vw, #6a6a6a 48vw, #202020 64vw);
+    background-size: 129.97vw 368.56vw;
+    background-position: 0 0;
+    mix-blend-mode: normal;
+    opacity: .3;
+    animation: aurora-m2 44s linear infinite reverse;
+  }
+}
+/* сдвиг ровно на целое число плиток → петля без скачка */
+@keyframes aurora-m {
+  from { background-position: 0 0, 0 0; }
+  to   { background-position: -609.25vw 0, -353.37vw 0; }
+}
+@keyframes aurora-m2 {
+  from { background-position: 0 0; }
+  to   { background-position: -389.91vw 0; }
 }
 
 /* ============ APPLE-STYLE REVEAL ============ */
