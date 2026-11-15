@@ -25,7 +25,9 @@ body {
   font-family: var(--font-text);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden; /* край вращающейся пластинки не даёт горизонтальный скролл */
+  /* clip (а не hidden) убирает горизонтальный скролл, но НЕ делает body скролл-контейнером —
+     иначе на мобильных ломается position: fixed (фон/панель «съезжают» при прокрутке) */
+  overflow-x: clip;
 }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
