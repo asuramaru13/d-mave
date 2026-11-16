@@ -1,12 +1,43 @@
 // Год в копирайте
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Hover-пауза вращения пластинки (деградирует без JS — винил всё равно крутится)
-const vinyl = document.getElementById('vinyl');
-if (vinyl) {
-  vinyl.addEventListener('mouseenter', () => vinyl.classList.add('is-paused'));
-  vinyl.addEventListener('mouseleave', () => vinyl.classList.remove('is-paused'));
-}
+// Вращение пластинки, направление зависит от направления скролла:
+// скролл вниз → по часовой, скролл вверх → против часовой. Пауза при наведении.
+(() => {
+  const vinyl = document.getElementById('vinyl');
+  if (!vinyl) return;
+  const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) { vinyl.style.transform = 'rotate(0deg)'; return; }
+
+  const SPEED = 360 / 26;      // град/сек (как и прежде — оборот за 26с)
+  let angle = 0;
+  let curDir = 1;              // текущее направление (плавно меняется)
+  let targetDir = 1;          // цель: вниз = +1 (по часовой), вверх = -1 (против)
+  let hovered = false;
+  let lastY = window.scrollY || window.pageYOffset || 0;
+  let lastT = performance.now();
+
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY || window.pageYOffset || 0;
+    if (y > lastY + 0.5) targetDir = 1;
+    else if (y < lastY - 0.5) targetDir = -1;
+    lastY = y;
+  }, { passive: true });
+
+  vinyl.addEventListener('pointerenter', () => { hovered = true; });
+  vinyl.addEventListener('pointerleave', () => { hovered = false; });
+
+  const tick = (now) => {
+    const dt = Math.min(0.05, (now - lastT) / 1000);
+    lastT = now;
+    // плавный разворот (проходит через замедление при смене направления)
+    curDir += (targetDir - curDir) * (1 - Math.exp(-dt / 0.35));
+    if (!hovered) angle = (angle + curDir * SPEED * dt) % 360;
+    vinyl.style.transform = 'rotate(' + angle.toFixed(2) + 'deg)';
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+})();
 
 // Apple-style появление текста при попадании в вьюпорт
 (() => {
